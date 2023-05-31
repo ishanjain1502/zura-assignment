@@ -48,7 +48,7 @@ const Search = ({setProduct}) => {
     <div className={styles.container} >
       <div className={styles.searchBox} >
         <input type="text" value={searchTerm} onChange={handleChange} placeholder='Search Here' />
-        <button onClick={handleSearch}>Search</button>
+        <button onClick={handleSearch}>🔍</button>
       </div>
 
       {suggestions.length > 0 ? (
@@ -56,6 +56,7 @@ const Search = ({setProduct}) => {
           {suggestions.map((product) => (
             <li key={product.product_id} onClick={() => handleItemClick(product)} >
                 <img className={styles.resultImage} src={product.listOfImages[0]} />
+                &nbsp;&nbsp;&nbsp;
                 <p className={styles.resutsCaption} >{product.name}</p>
             </li>
           ))}
