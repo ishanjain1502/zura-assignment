@@ -1,0 +1,15 @@
+.container{
+    padding: 0.5rem;
+    margin: 2rem;
+    width: 40%;
+    margin-top: 5rem;
+    max-width: fit-content;
+    background-color: rgba(160, 140, 237, 0.4);
+    display: flex 1 ;
+}
+
+
+.dropdown{
+    width: 100px;
+    height: 25px;
+}
