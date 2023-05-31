@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import Search from '@/components/search/Search'
 import CarouselWrapper from '@/components/offers/CarouselWrapper'
 import ProductCard from '@/components/productCard/ProductCard'
-import { baseUrl } from '@/config/urls'
+import { baseUrl, serverUrl } from '@/config/urls'
 import { useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,7 +29,7 @@ export default function Home({images}) {
 }
 
 export async function getStaticProps() {
-  const url = baseUrl + '/offers/getOffers'
+  const url = serverUrl + '/offers/getOffers'
   const response = await fetch(url, {
     method: "GET"
   })
